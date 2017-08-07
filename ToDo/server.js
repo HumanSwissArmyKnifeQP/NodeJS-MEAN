@@ -1,4 +1,3 @@
-// set up ========================
 const express  = require( 'express' );
 const app      = express();
 const mongoose = require( 'mongoose' );
@@ -6,7 +5,8 @@ const morgan   = require( 'morgan' );
 const bodyParser = require( 'body-parser' );
 const methodOverride = require( 'method-override' );
 const database = require( './config/database' );
-const port     = process.env.PORT || 8888; //eslint-disable-line
+// eslint-disable-next-line no-process-env
+const port     = process.env.PORT || 8888;
 
 mongoose.connect( database.url );
 
