@@ -4,6 +4,7 @@
   "description": "Simple MEAN Stack to do application",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "test"
   },
   "keywords": [
