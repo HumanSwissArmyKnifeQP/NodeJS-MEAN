@@ -6,7 +6,7 @@ const bodyParser = require( 'body-parser' );
 const methodOverride = require( 'method-override' );
 const database = require( './config/database' );
 // eslint-disable-next-line no-process-env
-const port     = process.env.PORT || 8888;
+const port     = process.env.PORT || 3333;
 
 mongoose.connect( database.url );
 
