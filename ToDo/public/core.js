@@ -1,42 +1,58 @@
-// public/core.js
-var bogoTodo = angular.module('bogoTodo', []);
+/* eslint-disable no-console */
+// eslint-disable-next-line no-unused-vars
+const bogoTodo = angular.module( 'bogoTodo', [] );
 
-function mainController($scope, $http) {
-    $scope.formData = {};
+// eslint-disable-next-line no-unused-vars
+function mainController( $scope, $http ){
 
-    // when landing on the page, get all todos and show them
-    $http.get('/api/todos')
-        .success(function(data) {
-            $scope.todos = data;
-            console.log(data);
-        })
-        .error(function(data) {
-            console.log('Error: ' + data);
-        });
+  $scope.formData = {};
 
-    // when submitting the add form, send the text to the node API
-    $scope.createTodo = function() {
-        $http.post('/api/todos', $scope.formData)
-            .success(function(data) {
-                $scope.formData = {}; // clear the form so our user is ready to enter another
-                $scope.todos = data;
-                console.log(data);
-            })
-            .error(function(data) {
-                console.log('Error: ' + data);
-            });
-    };
+  $http.get( '/api/todos' )
+    .success( ( results )=>{
 
-    // delete a todo after checking it
-    $scope.deleteTodo = function(id) {
-        $http.delete('/api/todos/' + id)
-            .success(function(data) {
-                $scope.todos = data;
-                console.log(data);
-            })
-            .error(function(data) {
-                console.log('Error: ' + data);
-            });
-    };
+      $scope.todos = results;
+      console.log( results );
+
+    } )
+    .error( ( err )=>{
+
+      console.log( `Error: ${  err }` );
+
+    } );
+
+  $scope.createTodo = ()=>{
+
+    $http.post( '/api/todos', $scope.formData )
+      .success( ( results )=>{
+
+        $scope.formData = {};
+        $scope.todos = results;
+        console.log( results );
+
+      } )
+      .error( ( err )=>{
+
+        console.log( `Error: ${  err }` );
+
+      } );
+
+  };
+
+  $scope.deleteTodo = ( id )=>{
+
+    $http.delete( `/api/todos/${  id }` )
+      .success( ( results )=>{
+
+        $scope.todos = results;
+        console.log( results );
+
+      } )
+      .error( ( results )=>{
+
+        console.log( `Error: ${  results }` );
+
+      } );
+
+  };
 
 }
