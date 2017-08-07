@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const express  = require( 'express' );
 const app      = express();
 const mongoose = require( 'mongoose' );
@@ -20,4 +21,4 @@ app.use( methodOverride() );
 require( './app/routes.js' )( app );
 
 app.listen( port );
-console.log( `App listening on port : ${  port }` ); // eslint-disable-line
+console.log( `App listening on port : ${ port }` );

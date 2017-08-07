@@ -1,14 +1,28 @@
 {
-  "name"         : "bogo-todo",
-  "version"      : "0.0.0",
-  "description"  : "Simple todo application.",
-  "main"         : "server.js",
-  "author"       : "Bogotobogo",
-  "dependencies" : {
-    "express"    : "~4.13.2",
-    "mongoose"   : "~3.6.2",
-    "morgan"     : "~1.6.1",
-    "body-parser": "~1.14.1",
-    "method-override": "~2.3.5"
+  "name": "to-do-app-mean",
+  "version": "1.0.0",
+  "description": "Simple MEAN Stack to do application",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "test"
+  },
+  "keywords": [
+    "MEAN"
+  ],
+  "author": "Q. Pham",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.5",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
