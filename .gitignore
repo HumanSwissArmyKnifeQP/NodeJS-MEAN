@@ -22,6 +22,7 @@ build/Release
 
 # Dependency directories
 node_modules
+ToDoAngular/node_modules
 ToDo/node_modules
 global/copied-dependencies
 dev/db/copied-dependencies/
