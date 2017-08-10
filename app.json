@@ -1,0 +1,16 @@
+{
+  "name": "NodeJS-MEAN",
+  "description": "Sandbox MEAN stack app",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
